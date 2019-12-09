@@ -23,6 +23,7 @@ module.exports = {
     'generator-star-spacing': ['error', {before: true, after: false}],
     'quotes': ['error', 'single'],
     'strict': ['error', 'global'],
+    'object-curly-spacing': ['error', 'never'],
     'new-cap': [
       'error',
       {
