@@ -14,6 +14,12 @@ module.exports = {
     'camelcase': 'warn',
     'comma-dangle': ['warn', 'always-multiline'],
     'no-process-exit': 'warn',
+    'arrow-spacing': 'warn',
+    'space-before-blocks': 'warn',
+    'keyword-spacing': 'warn',
+    "indent": ['warn', 2, {"SwitchCase": 1}],
+    "key-spacing": ['warn', {"beforeColon": false, "afterColon": true, "mode": "minimum"}],
+    "comma-spacing": ['warn', { "before": false, "after": true }],
 
     // error
     'no-var': 'error',
