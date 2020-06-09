@@ -20,6 +20,7 @@ module.exports = {
     "indent": ['warn', 2, {"SwitchCase": 1}],
     "key-spacing": ['warn', {"beforeColon": false, "afterColon": true, "mode": "minimum"}],
     "comma-spacing": ['warn', { "before": false, "after": true }],
+    'no-return-await': 'warn',
 
     // error
     'no-var': 'error',
