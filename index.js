@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['google', 'eslint:recommended'],
+  extends: ['google', 'eslint:recommended', 'plugin:import/errors'],
   env: {
     node: true,
     mocha: true,
@@ -21,6 +21,20 @@ module.exports = {
     "key-spacing": ['warn', {"beforeColon": false, "afterColon": true, "mode": "minimum"}],
     "comma-spacing": ['warn', { "before": false, "after": true }],
     'no-return-await': 'warn',
+    'import/order': [
+      'warn', {
+        'groups': ['builtin', 'external'],
+        'pathGroups': [
+          {
+            'pattern': 'cloud-*',
+            'group': 'external',
+            'position': 'after'
+          },
+        ],
+        'pathGroupsExcludedImportTypes': ['builtin'],
+        'newlines-between': 'always',
+      },
+    ],
 
     // error
     'no-var': 'error',
