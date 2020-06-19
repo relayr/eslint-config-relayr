@@ -3,23 +3,54 @@ module.exports = {
   env: {
     node: true,
     mocha: true,
-    es6: true,
+    es2020: true,
   },
   rules: {
     // off
     'no-implicit-coercion': 'off',
     'no-multiple-empty-lines': 'off',
+    'curly': 'off',
 
     // warn
     'camelcase': 'warn',
-    'comma-dangle': ['warn', 'always-multiline'],
+    'one-var': ['warn', 'consecutive'],
+    'valid-jsdoc': ['warn', {
+      'requireParamType': true,
+      'prefer': {
+        'arg': 'param',
+        'argument': 'param',
+      },
+      'preferType': { 
+        'Boolean': 'boolean',
+        'Number': 'number',
+        'String': 'string',
+        'object': 'Object',
+        'array': 'Array',
+        'function': 'Function',
+      }
+    }],
+    'comma-dangle': ['warn', {
+      'arrays': 'always-multiline',
+      'objects': 'always-multiline',
+      'imports': 'always-multiline',
+      'exports': 'always-multiline',
+      'functions': 'never'
+    }],
+    'no-multi-space': ['warn', { 'ignoreEOLComments': true }],
+    'require-jsdoc': 'warn',
+    'brace-style': ['warn', '1tbs', { 'allowSingleLine': true }],
+    'arrow-parens': ['warn', 'as-needed', { 'requireForBlockBody': true }],
+    'space-before-function-paren': 'warn',
+    'no-invalid-this': 'warn',
+    'no-prototype-builtins': 'warn',
+    'no-trailing-spaces': 'warn',
     'no-process-exit': 'warn',
     'arrow-spacing': 'warn',
     'space-before-blocks': 'warn',
     'keyword-spacing': 'warn',
-    "indent": ['warn', 2, {"SwitchCase": 1}],
-    "key-spacing": ['warn', {"beforeColon": false, "afterColon": true, "mode": "minimum"}],
-    "comma-spacing": ['warn', { "before": false, "after": true }],
+    'indent': ['warn', 2, {'SwitchCase': 1}],
+    'key-spacing': ['warn', {'beforeColon': false, 'afterColon': true, 'mode': 'minimum'}],
+    'comma-spacing': ['warn', { 'before': false, 'after': true }],
     'no-return-await': 'warn',
     'import/order': [
       'warn', {
