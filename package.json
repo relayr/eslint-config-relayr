@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-relayr",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "eslint config for relayr",
   "main": "index.js",
   "keywords": [

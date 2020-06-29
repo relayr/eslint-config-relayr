@@ -10,10 +10,10 @@ module.exports = {
     'no-implicit-coercion': 'off',
     'no-multiple-empty-lines': 'off',
     'curly': 'off',
+    'one-var': 'off',
 
     // warn
     'camelcase': 'warn',
-    'one-var': ['warn', 'consecutive'],
     'valid-jsdoc': ['warn', {
       'requireParamType': true,
       'prefer': {
