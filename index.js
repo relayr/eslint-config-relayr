@@ -36,7 +36,7 @@ module.exports = {
       'exports': 'always-multiline',
       'functions': 'never'
     }],
-    'no-multi-space': ['warn', { 'ignoreEOLComments': true }],
+    'no-multi-spaces': ['warn', { 'ignoreEOLComments': true }],
     'require-jsdoc': 'warn',
     'brace-style': ['warn', '1tbs', { 'allowSingleLine': true }],
     'arrow-parens': ['warn', 'as-needed', { 'requireForBlockBody': true }],
