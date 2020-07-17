@@ -55,9 +55,12 @@ module.exports = {
     'import/order': [
       'warn', {
         'groups': ['builtin', 'external'],
+
+        // Consider all paths that start with "cloud-" as an internal relayr package
+        // Place this group after the external packages
         'pathGroups': [
           {
-            'pattern': 'cloud-*',
+            'pattern': '/^cloud-/',
             'group': 'external',
             'position': 'after'
           },
