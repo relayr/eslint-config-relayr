@@ -98,4 +98,18 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'script',
   },
+  overrides: [
+    {
+      files: ['test/**/*.js', 'tests/**/*.js'],
+      rules: {
+        'no-invalid-this': 'off',
+        'max-len':  ['error', { 
+          code: 140,
+          tabWidth: 4,
+          ignoreStrings: true,
+          ignoreTemplateLiterals: true
+        }],
+      },
+    },
+  ],
 }
